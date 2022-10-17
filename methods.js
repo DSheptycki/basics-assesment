@@ -23,7 +23,12 @@ function AddIngredient() {
     cell3.innerHTML = amountType;
   } else {
     if (amount > 1) {
-      if (amountType == "Tsp" || amountType == "Tbsp") {
+      if (
+        amountType == "Tsp" ||
+        amountType == "Tbsp" ||
+        amountType == "g" ||
+        amountType == "Oz"
+      ) {
         amountType = amountType + "'s";
       } else {
         amountType = amountType + "s";
