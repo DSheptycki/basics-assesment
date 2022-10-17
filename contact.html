@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style-sheet.css" />
+    <!-- Linking this webpage to my css file-->
+    <title>Contact Page</title>
+  </head>
+  <body>
+    <!--Header, displays the main purpose of the current wepage-->
+    <header>
+      <h1>Contact Me</h1>
+      <p>
+        If you have any issues or recommendations for this website, let me know!
+      </p>
+    </header>
+    <!--Navigation bar, used to navigate different section of the web pages.-->
+    <nav class="topnav">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li class="dropdown" tabindex="0">
+          <a href="javascript:void(0)" class="dropbtn" tabindex="-1"
+            >My Recipes</a
+          >
+          <div class="dropdown-content">
+            <a href="omelette.html">Omelette</a>
+            <a href="remy-soup.html">Soup</a>
+            <a href="sweetbreads.html">Sweetbreads</a>
+            <a href="scallops.html">Seared Scallops</a>
+            <a href="salmon.html">Salmon Roulade</a>
+            <a href="ratatouille.html">Ratatouille</a>
+          </div>
+        </li>
+        <li><a href="your-recipe.html">Your Recipes</a></li>
+        <li style="float: right"><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+
+    <form
+      name="recipe-suggestions"
+      id="recipe-suggestions"
+      method="get"
+      autocomplete="off"
+      class="userForm"
+    >
+      <!-- Who are you form used to find out which age demographic dosent like certain parts -->
+      <fieldset>
+        <legend>Who are you?</legend>
+        <label for="fname">First Name</label>
+        <input type="text" id="fname" name="firstname" />
+        <label for="lname">Last Name</label>
+        <input type="text" id="lname" name="lastname" />
+        <label for="birthday">Date of Birth</label>
+        <input type="date" id="birthday" name="birthday" />
+      </fieldset>
+
+      <!-- Actual Complaint Form -->
+      <fieldset>
+        <legend>What would you like to say?</legend>
+        <select id="issue" name="issue">
+          <optgroup label="Complaint"></optgroup>
+          <option value="bug">Bug</option>
+          <option value="acsb">Accesibility Issue</option>
+          <option value="other">Other</option>
+        </select>
+        <br />
+        <label for="text-complaint">Add More:</label> <br />
+        <textarea id="text-complaint" name="text-complaint" rows="4" cols="50">
+        </textarea>
+      </fieldset>
+      <button>Submit</button>
+    </form>
+
+    <footer>&copy; <em id="date"></em><i>Remy Remington</i></footer>
+  </body>
+</html>
