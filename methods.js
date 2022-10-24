@@ -12,10 +12,15 @@ function AddIngredient() {
     var cell2 = row.insertCell(1);
     var cell3 = row.insertCell(2);
     if (amount > 1) {
-      if (amountType == "Tsp" || amountType == "Tbsp") {
-        amountType = amountType + "'s";
+      if (
+        amountType == "Tsp" ||
+        amountType == "Tbsp" ||
+        amountType == "G" ||
+        amountType == "Oz"
+      ) {
+        amountType += "'s";
       } else {
-        amountType = amountType + "s";
+        amountType += "s";
       }
     }
     cell1.innerHTML = ingredient;
@@ -26,12 +31,12 @@ function AddIngredient() {
       if (
         amountType == "Tsp" ||
         amountType == "Tbsp" ||
-        amountType == "g" ||
+        amountType == "G" ||
         amountType == "Oz"
       ) {
-        amountType = amountType + "'s";
+        amountType += "'s";
       } else {
-        amountType = amountType + "s";
+        amountType += "s";
       }
     }
     document.getElementById("example-cell-1").innerHTML = ingredient;
